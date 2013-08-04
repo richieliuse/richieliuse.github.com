@@ -1,0 +1,8 @@
+---
+layout: post
+title: "First"
+date: 2013-01-31 21:53
+comments: true
+categories: 
+---
+终于在github上架好了blog，今后会在这里放一些自己的心得以及自认为有趣的东西。
