@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://richieliuse.github.io/sitemap.xml 
+Sitemap: http://richieliuse.github.com/sitemap.xml 

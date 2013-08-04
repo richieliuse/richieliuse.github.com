@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Mac | Richie的技术博客]]></title>
-  <link href="http://richieliuse.github.io/blog/categories/mac/atom.xml" rel="self"/>
-  <link href="http://richieliuse.github.io/"/>
-  <updated>2013-08-04T22:59:52+08:00</updated>
-  <id>http://richieliuse.github.io/</id>
+  <link href="http://richieliuse.github.com/blog/categories/mac/atom.xml" rel="self"/>
+  <link href="http://richieliuse.github.com/"/>
+  <updated>2013-08-04T23:53:56+08:00</updated>
+  <id>http://richieliuse.github.com/</id>
   <author>
     <name><![CDATA[Richie Liu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mac系统更新Python]]></title>
-    <link href="http://richieliuse.github.io/blog/2013/05/19/macxi-tong-geng-xin-python/"/>
+    <link href="http://richieliuse.github.com/blog/2013/05/19/macxi-tong-geng-xin-python/"/>
     <updated>2013-05-19T09:20:00+08:00</updated>
-    <id>http://richieliuse.github.io/blog/2013/05/19/macxi-tong-geng-xin-python</id>
+    <id>http://richieliuse.github.com/blog/2013/05/19/macxi-tong-geng-xin-python</id>
     <content type="html"><![CDATA[<p>Mac的系统都有预装python，这给我们的开发工作带来了极大的便利。不过苹果似乎对维护这些三方的语言（包括ruby）并没有什么热情，因此如果我们想要用上最新版的python，就需要自己动手了。</p>
 
 <p>以我自己的mountain lion系统为例，在terminal输入

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Richie的技术博客]]></title>
-  <link href="http://richieliuse.github.io/atom.xml" rel="self"/>
-  <link href="http://richieliuse.github.io/"/>
-  <updated>2013-08-04T22:59:52+08:00</updated>
-  <id>http://richieliuse.github.io/</id>
+  <link href="http://richieliuse.github.com/atom.xml" rel="self"/>
+  <link href="http://richieliuse.github.com/"/>
+  <updated>2013-08-04T23:53:56+08:00</updated>
+  <id>http://richieliuse.github.com/</id>
   <author>
     <name><![CDATA[Richie Liu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mac系统更新Python]]></title>
-    <link href="http://richieliuse.github.io/blog/2013/05/19/macxi-tong-geng-xin-python/"/>
+    <link href="http://richieliuse.github.com/blog/2013/05/19/macxi-tong-geng-xin-python/"/>
     <updated>2013-05-19T09:20:00+08:00</updated>
-    <id>http://richieliuse.github.io/blog/2013/05/19/macxi-tong-geng-xin-python</id>
+    <id>http://richieliuse.github.com/blog/2013/05/19/macxi-tong-geng-xin-python</id>
     <content type="html"><![CDATA[<p>Mac的系统都有预装python，这给我们的开发工作带来了极大的便利。不过苹果似乎对维护这些三方的语言（包括ruby）并没有什么热情，因此如果我们想要用上最新版的python，就需要自己动手了。</p>
 
 <p>以我自己的mountain lion系统为例，在terminal输入</p>
@@ -117,9 +117,9 @@
   
   <entry>
     <title type="html"><![CDATA[octopress搭建blog心得]]></title>
-    <link href="http://richieliuse.github.io/blog/2013/02/01/octopressda-jian-blogxin-de/"/>
+    <link href="http://richieliuse.github.com/blog/2013/02/01/octopressda-jian-blogxin-de/"/>
     <updated>2013-02-01T20:54:00+08:00</updated>
-    <id>http://richieliuse.github.io/blog/2013/02/01/octopressda-jian-blogxin-de</id>
+    <id>http://richieliuse.github.com/blog/2013/02/01/octopressda-jian-blogxin-de</id>
     <content type="html"><![CDATA[<p>前后断断续续花了两个晚上终于用octopress在github上搭建好了自己的blog，以后就把这里作为根据地了。在网上查阅了不少的资料，发现其中都有一些说的不甚清楚的地方，导致自己也走了不少的弯路，所以在这里总结一下，省得自己哪天又忘记了。顺便说一下，本人使用的是mountain lion系统。</p>
 
 <p>首先的首先，当然是配环境啦。我第一次搭建失败的原因就是想当然的从网上找了一篇教程，结果配到最后才发现那篇教程是写给linux的，顿时心中万马奔腾，花了n久才恢复过来。</p>
@@ -130,9 +130,9 @@
   
   <entry>
     <title type="html"><![CDATA[First]]></title>
-    <link href="http://richieliuse.github.io/blog/2013/01/31/first/"/>
+    <link href="http://richieliuse.github.com/blog/2013/01/31/first/"/>
     <updated>2013-01-31T21:53:00+08:00</updated>
-    <id>http://richieliuse.github.io/blog/2013/01/31/first</id>
+    <id>http://richieliuse.github.com/blog/2013/01/31/first</id>
     <content type="html"><![CDATA[<p>终于在github上架好了blog，今后会在这里放一些自己的心得以及自认为有趣的东西。</p>
 ]]></content>
   </entry>
