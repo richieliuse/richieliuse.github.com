@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mac | Richie的技术博客]]></title>
+  <link href="http://richieliuse.github.io/blog/categories/mac/atom.xml" rel="self"/>
+  <link href="http://richieliuse.github.io/"/>
+  <updated>2013-08-04T22:59:52+08:00</updated>
+  <id>http://richieliuse.github.io/</id>
+  <author>
+    <name><![CDATA[Richie Liu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mac系统更新Python]]></title>
+    <link href="http://richieliuse.github.io/blog/2013/05/19/macxi-tong-geng-xin-python/"/>
+    <updated>2013-05-19T09:20:00+08:00</updated>
+    <id>http://richieliuse.github.io/blog/2013/05/19/macxi-tong-geng-xin-python</id>
+    <content type="html"><![CDATA[<p>Mac的系统都有预装python，这给我们的开发工作带来了极大的便利。不过苹果似乎对维护这些三方的语言（包括ruby）并没有什么热情，因此如果我们想要用上最新版的python，就需要自己动手了。</p>
+
+<p>以我自己的mountain lion系统为例，在terminal输入
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$python</span> &amp;mdash;version
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+会显示'python 2.7.3'，这是我们当前的python版本。而在<a href="http://www.python.org">python</a>官网上目前的版本为2.7.5，接下来我们就来演示如何将系统的版本升级为2.7.5.</p>
+
+<h4>1. 下载并安装最新版Python</h4>
+
+<p>去<a href="http://www.python.org/download">这里</a>选择适合自己的python版本，这里我选择的是<em>Python 2.7.5 Mac OS X 64-bit/32-bit x86-64/i386 Installer</em>。使用下载的DMG进行安装，系统会自动将python安装至<strong>/Library/Frameworks/Python.framework</strong>。需要注意的是，系统的python版本是在<strong>/System/Library/Frameworks/Python.framework</strong>，接下来我们就将新安装的版本替换至此。</p>
+
+<h4>2. 替换Python版本</h4>
+
+<p>这里比较简单，直接执行
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$sudo</span> rm -R /System/Library/Frameworks/Python.framework/Versions/2.7
+</span><span class='line'><span class="nv">$sudo</span> mv /Library/Frameworks/Python.framework/Versions/2.7 /System/Library/Frameworks/Python.framework/Versions/2.7
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h4>3. 修复Group属性</h4>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$sudo</span> chown -R root:wheel /System/Library/Frameworks/Python.framework/Versions/2.7
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h4>4. 修复Current链接</h4>
+
+<p>这里我们需要将<strong>/System/Library/Frameworks/Python.framework/Versions/Current</strong>链接到替换后的Python版本，执行
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$sudo</span> rm /System/Library/Frameworks/Python.framework/Versions/Current
+</span><span class='line'><span class="nv">$sudo</span> ln -s /Library/Frameworks/Python.framework/Versions/2.7 /System/Library/Frameworks/Python.framework/Versions/Current
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h4>5. 替换/usr/bin中的版本</h4>
+
+<p>这一步比较关键，而且容易忘记。因为系统在/usr/bin目录中会存放Python相关的一些可执行文件，所以如果我们不替换此目录的文件，会导致Python执行的时候依然会使用旧版本。这里我们需要将<strong>/System/Library/Frameworks/Python.framework/Versions/Current</strong>中对应的文件替换至此，具体需要替换的是<strong>pydoc</strong>、<strong>python</strong>、<strong>pythonw</strong>、<strong>python-config</strong>这四个文件。执行
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$sudo</span> rm /usr/bin/pydoc
+</span><span class='line'><span class="nv">$sudo</span> rm /usr/bin/python
+</span><span class='line'><span class="nv">$sudo</span> rm /usr/bin/pythonw
+</span><span class='line'><span class="nv">$sudo</span> rm /usr/bin/python-config
+</span><span class='line'><span class="nv">$sudo</span> ln -s /System/Library/Frameworks/Python.framework/Versions/Current/bin/pydoc /usr/bin/pydoc
+</span><span class='line'><span class="nv">$sudo</span> ln -s /System/Library/Frameworks/Python.framework/<span class="nv">$Versions</span>/Current/bin/pydoc /usr/bin/python
+</span><span class='line'><span class="nv">$sudo</span> ln -s /System/Library/Frameworks/Python.framework/Versions/Current/bin/pydoc /usr/bin/pythonw
+</span><span class='line'><span class="nv">$sudo</span> ln -s /System/Library/Frameworks/Python.framework/Versions/Current/bin/pydoc /usr/bin/python-config
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h4>6. 编辑.bash_profile</h4>
+
+<p>在第1步Python进行安装的时候会自动修改～/.bash_profile文件，主要是指定可执行文件的路径。由于我们已经将系统版本进行过替换，所以不需要再在此文件进行任何修改。这里我们只需要删除新加的修改
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">PATH</span><span class="o">=</span>&amp;ldquo;System/Library/Frameworks/Python.framework/Versions/2.7/bin:<span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>&amp;rdquo;
+</span><span class='line'><span class="nb">export </span>PATH
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+，或者将备份文件.bash_profile.pysave恢复即可。</p>
+
+<p>至此，所有的替换工作已经完成，我们可以进行一下验证。重启terminal，执行
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$python</span> &amp;mdash;version
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+，成功的话就会打印出我们所替换的最新版本。</p>
+
+<p>此方法不但可以替换2.x的版本，对于3.x的版本也同样适用。</p>
+
+<h4>参考</h4>
+
+<p><a href="wolfpaulus.com/jounal/mac/installing_python_osx">wolfpaulus.com/jounal/mac/installing_python_osx</a></p>
+]]></content>
+  </entry>
+  
+</feed>
