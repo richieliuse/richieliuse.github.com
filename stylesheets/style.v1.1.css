@@ -123,6 +123,7 @@ a:hover, a:visited, a:link, a:active {
 }
 .footer a {
     color: #acacac;
+    margin-left: 5vw;
 }
 
 
@@ -186,8 +187,6 @@ and (max-device-width : 480px) {
     }
     .footer {
         height: 18vw;
-    }
-    .footer p {
         font-size: 2.5vw;
     }
 }
