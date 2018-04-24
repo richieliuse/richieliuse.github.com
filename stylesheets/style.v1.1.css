@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PingFang SC', 'Helvetica', 'Microsoft YaHei', 'Arial';
+}
+html,body {
+   width: 100%;
+   height: 100%;
+}
+ol, ul {
+    list-style: none;
+}
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+.content {
+    position: relative;
+    min-height: 53.27vw;
+    background: linear-gradient(#27DBFF, #11B5FF);
+    background: -webkit-linear-gradient(#27DBFF, #11B5FF);
+    background: -o-linear-gradient(#27DBFF, #11B5FF);
+    background: -moz-linear-gradient(#27DBFF, #11B5FF);
+}
+.content .left {
+    position: absolute;
+    top: 6.5vw;
+    bottom: 3.87vw;
+    left: 5.36vw;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+}
+.content .logo {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    height: 3.27vw;
+}
+.content .logo img:first-child {
+    width: 4vw;
+}
+.content .logo img:last-child {
+    width: 6vw;
+    margin-left: 0.89vw;
+}
+.content .slogan {
+    font-size: 5.65vw;
+    line-height: 1.25;
+    color: white;
+}
+.content .download img {
+    width: 13.33vw;
+}
+.content .download img:first-child {
+    margin-right: 1.96vw;
+}
+.content .right {
+    position: absolute;
+    right: 7.74vw;
+    bottom: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+}
+.content .right img {
+    width: 36.9vw;
+}
+.footer {
+    height: 8vw;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+}
+.footer p {
+    line-height: 2;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: 300;
+    color: #acacac;
+}
+.footer a {
+    color: #acacac;
+}
+
+
+/* Smartphones (portrait and landscape) */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .container {
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    .content {
+        position: inherit;
+        min-height: 200vw;
+    }    
+    .content .left {
+        position: inherit;
+        padding: 10vw 0;
+    }
+    .content .logo {
+        width: 100%;
+        height: 30vw;
+        justify-content: center;
+    }
+    .content .logo img:first-child {
+        width: 14vw;
+    }
+    .content .logo img:last-child {
+        width: 20vw;
+        margin-left: 5vw;
+    }
+    .content .slogan {
+        font-size: 15vw;
+    }
+    .content .slogan p {
+        text-align: center;
+    }
+    .content .download {
+        height: 20vw;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content .download img {
+        width: 30vw;
+    }
+    .content .download img:first-child {
+        margin-right: 8vw;
+    }
+    .content .right {
+        display: block;
+        position: inherit;
+    }
+    .content .right img {
+        display: block;
+        width: 100%;
+    }
+    .footer {
+        height: 18vw;
+    }
+    .footer p {
+        font-size: 2.5vw;
+    }
+}
