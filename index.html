@@ -1,333 +1,42 @@
-
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Richie的技术博客</title>
-  <meta name="author" content="Richie Liu">
-
-  
-  <meta name="description" content="Mac的系统都有预装python，这给我们的开发工作带来了极大的便利。不过苹果似乎对维护这些三方的语言（包括ruby）并没有什么热情，因此如果我们想要用上最新版的python，就需要自己动手了。 以我自己的mountain lion系统为例，在terminal输入 1
-$python -- &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://richieliuse.github.com">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Richie的技术博客" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-  
-
+    <meta charset="UTF-8">
+    <title>友话-找到志同道合的朋友</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet"  type="text/css" href="./stylesheets/style.v1.1.css">
 </head>
-
-<body   class="collapse-sidebar sidebar-footer" >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Richie的技术博客</a></h1>
-  
-    <h2>一些记录.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:richieliuse.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/05/19/macxi-tong-geng-xin-python/">Mac系统更新Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-19T09:20:00+08:00" pubdate data-updated="true">May 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Mac的系统都有预装python，这给我们的开发工作带来了极大的便利。不过苹果似乎对维护这些三方的语言（包括ruby）并没有什么热情，因此如果我们想要用上最新版的python，就需要自己动手了。</p>
-
-<p>以我自己的mountain lion系统为例，在terminal输入</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$python</span> --version
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>会显示&#8217;python 2.7.3&#8217;，这是我们当前的python版本。而在<a href="http://www.python.org">python</a>官网上目前的版本为2.7.5，接下来我们就来演示如何将系统的版本升级为2.7.5.</p>
-
-<h4>1. 下载并安装最新版Python</h4>
-
-<p>去<a href="http://www.python.org/download">这里</a>选择适合自己的python版本，这里我选择的是<em>Python 2.7.5 Mac OS X 64-bit/32-bit x86-64/i386 Installer</em>。使用下载的DMG进行安装，系统会自动将python安装至<strong>/Library/Frameworks/Python.framework</strong>。需要注意的是，系统的python版本是在<strong>/System/Library/Frameworks/Python.framework</strong>，接下来我们就将新安装的版本替换至此。</p>
-
-<h4>2. 替换Python版本</h4>
-
-<p>这里比较简单，直接执行</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$sudo</span> rm -R /System/Library/Frameworks/Python.framework/Versions/2.7
-</span><span class='line'><span class="nv">$sudo</span> mv /Library/Frameworks/Python.framework/Versions/2.7 /System/Library/Frameworks/Python.framework/Versions/2.7
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>3. 修复Group属性</h4>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$sudo</span> chown -R root:wheel /System/Library/Frameworks/Python.framework/Versions/2.7
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>4. 修复Current链接</h4>
-
-<p>这里我们需要将<strong>/System/Library/Frameworks/Python.framework/Versions/Current</strong>链接到替换后的Python版本，执行</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$sudo</span> rm /System/Library/Frameworks/Python.framework/Versions/Current
-</span><span class='line'><span class="nv">$sudo</span> ln -s /Library/Frameworks/Python.framework/Versions/2.7 /System/Library/Frameworks/Python.framework/Versions/Current
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>5. 替换/usr/bin中的版本</h4>
-
-<p>这一步比较关键，而且容易忘记。因为系统在/usr/bin目录中会存放Python相关的一些可执行文件，所以如果我们不替换此目录的文件，会导致Python执行的时候依然会使用旧版本。这里我们需要将<strong>/System/Library/Frameworks/Python.framework/Versions/Current</strong>中对应的文件替换至此，具体需要替换的是<strong>pydoc</strong>、<strong>python</strong>、<strong>pythonw</strong>、<strong>python-config</strong>这四个文件。执行</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$sudo</span> rm /usr/bin/pydoc
-</span><span class='line'><span class="nv">$sudo</span> rm /usr/bin/python
-</span><span class='line'><span class="nv">$sudo</span> rm /usr/bin/pythonw
-</span><span class='line'><span class="nv">$sudo</span> rm /usr/bin/python-config
-</span><span class='line'><span class="nv">$sudo</span> ln -s /System/Library/Frameworks/Python.framework/Versions/Current/bin/pydoc /usr/bin/pydoc
-</span><span class='line'><span class="nv">$sudo</span> ln -s /System/Library/Frameworks/Python.framework/<span class="nv">$Versions</span>/Current/bin/pydoc /usr/bin/python
-</span><span class='line'><span class="nv">$sudo</span> ln -s /System/Library/Frameworks/Python.framework/Versions/Current/bin/pydoc /usr/bin/pythonw
-</span><span class='line'><span class="nv">$sudo</span> ln -s /System/Library/Frameworks/Python.framework/Versions/Current/bin/pydoc /usr/bin/python-config
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>6. 编辑.bash_profile</h4>
-
-<p>在第1步Python进行安装的时候会自动修改～/.bash_profile文件，主要是指定可执行文件的路径。由于我们已经将系统版本进行过替换，所以不需要再在此文件进行任何修改。这里我们只需要删除新加的修改</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;System/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}&quot;</span>
-</span><span class='line'><span class="nb">export </span>PATH
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>，或者将备份文件.bash_profile.pysave恢复即可。</p>
-
-<p>至此，所有的替换工作已经完成，我们可以进行一下验证。重启terminal，执行</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$python</span> --version
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>，成功的话就会打印出我们所替换的最新版本。</p>
-
-<p>此方法不但可以替换2.x的版本，对于3.x的版本也同样适用。</p>
-
-<h4>参考</h4>
-
-<p><a href="wolfpaulus.com/jounal/mac/installing_python_osx">wolfpaulus.com/jounal/mac/installing_python_osx</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/01/octopressda-jian-blogxin-de/">Octopress搭建blog心得</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-01T20:54:00+08:00" pubdate data-updated="true">Feb 1<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>前后断断续续花了两个晚上终于用octopress在github上搭建好了自己的blog，以后就把这里作为根据地了。在网上查阅了不少的资料，发现其中都有一些说的不甚清楚的地方，导致自己也走了不少的弯路，所以在这里总结一下，省得自己哪天又忘记了。顺便说一下，本人使用的是mountain lion系统。</p>
-
-<p>首先的首先，当然是配环境啦。我第一次搭建失败的原因就是想当然的从网上找了一篇教程，结果配到最后才发现那篇教程是写给linux的，顿时心中万马奔腾，花了n久才恢复过来。</p>
-
-<p>（未完待续&hellip;）</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/31/first/">First</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-31T21:53:00+08:00" pubdate data-updated="true">Jan 31<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>终于在github上架好了blog，今后会在这里放一些自己的心得以及自认为有趣的东西。</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/05/19/macxi-tong-geng-xin-python/">Mac系统更新Python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/01/octopressda-jian-blogxin-de/">octopress搭建blog心得</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/31/first/">First</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
+<body>
+    <div class="container">
+        <div class="header">
+        </div>
+        <div class="content">
+            <div class="left">
+                <div class="logo">
+                    <img src="./images/logo.v1.1.png" alt="友话">
+                    <img src="./images/name.v1.1.png" alt="友话">
+                </div>
+                <div class="slogan">
+                    <p>认识和你一样</p>
+                    <p>有趣的人</p>
+                </div>
+                <div class="download">
+                    <img src="./images/btn-iphone.v1.1.png" alt="iphone版下载链接">
+                    <img src="./images/btn-android.v1.1.png" alt="android版下载链接">
+                </div>
+            </div>
+            <div class="right">
+                <img src="./images/preview.v1.1.png" alt="应用预览图">
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>
+                    京ICP备14058946 京公安网安备11010502032474
+                </p>            
+            </div>
+        </div>
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Richie Liu -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
