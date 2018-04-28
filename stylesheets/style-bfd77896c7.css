@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PingFang SC', 'Helvetica', 'Microsoft YaHei', 'Arial';
+}
+html, body {
+   width: 100%;
+   height: 100%;
+}
+ol, ul {
+    list-style: none;
+}
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+/* PC & H5 */
+.download {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+}
+.download a {
+    color: #fff;
+}
+.download .btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-weight: 300;
+    color: #999;
+}
+
+/* Smartphones (portrait and landscape) */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .pc {
+        display: none;
+    }
+    .h5 {
+        display: block;
+    }
+    .container {
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    .header {
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .header .background {
+        width: 100%;
+        height: 51.44928vw;
+        background: url(../images/h5_background-ec7a8cf6a5.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .header .logo {
+        width: 50vw;
+        height: 44.2029vw;
+        position: absolute;
+        top: 18.11594vw;
+        background: url(../images/h5_logo-d8e57c2cfb.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .download .btn {
+        width: 38.64734vw;
+        height: 10.62802vw;
+        border-radius: 5.31401vw;
+        margin-top: 21.73913vw;
+        font-size: 3.86473vw;
+    }
+    .download .iphone {
+        margin-right: 4.83092vw;
+        background: -webkit-gradient(linear, left top, right top, from(#11B6FF), to(#00C4FF));
+        background: linear-gradient(to right, #11B6FF, #00C4FF);
+    }
+    .download .android {
+        background: -webkit-gradient(linear, left top, right top, from(#11B5FF), to(#00C4FF));
+        background: linear-gradient(to right, #11B5FF, #00C4FF);
+    }
+    .download .iphone:before {
+        width: 6.76329vw;
+        height: 6.76329vw;
+        content: "";
+        background: url(../images/h5_iphone_btn-b0f434ba2d.png) no-repeat;
+        background-size: 6.76329vw 6.76329vw;
+        margin-right: 1.93237vw;
+        margin-bottom: 1.20773vw;
+    }
+    .download .android:before {
+        width: 7.24638vw;
+        height: 7.24638vw;
+        content: "";
+        background: url(../images/h5_android_btn-72f4250ab6.png) no-repeat;
+        background-size: 7.24638vw 7.24638vw;
+        margin-right: 1.93237vw;
+    }
+    .preview {
+        width: 100%;
+        height: 92.02899vw;
+        background: url(../images/h5_preview-841508dc02.png) no-repeat 50% 50%;
+        background-size: 73.42995vw 100%;
+        margin-top: 16.90821vw;
+    }
+    .footer {
+        height: 12.07729vw;
+        font-size: 2.89855vw;
+        padding: 6.03865vw 0;
+    }
+}
+
+/* PC */
+@media only screen
+and (min-device-width : 481px) {
+    .pc {
+        display: block;
+    }
+    .h5 {
+        display: none;
+    }
+    .content {
+        position: relative;
+        width: 100%;
+        height: 49.44444vw;
+        background: url(../images/pc_background-c31d4e91d8.png) no-repeat;
+        background-size: 100% 49.44444vw;
+    }
+    .content .left {
+        position: absolute;
+        top: 5.55556vw;
+        left: 5.55556vw;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    .left .header {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 5.34722vw;
+    }
+    .header .logo {
+        width: 5.34722vw;
+        height: 5.34722vw;
+        background: url(../images/pc_logo-e32dacc3f7.png) no-repeat;
+        background-size: 100% 100%;
+        margin-right: 1.94444vw;
+    }
+    .header .name {
+        width: 5.90278vw;
+        height: 2.77778vw;
+        background: url(../images/pc_name-9350257a95.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .left .slogan {
+        font-size: 5.27778vw;
+        line-height: 1.3;
+        color: #fff;
+        margin: 5.20833vw 0 9.375vw;
+    }
+    .download .btn {
+        width: 16.66667vw;
+        height: 4.72222vw;
+        border-radius: 2.36111vw;
+        font-size: 1.80556vw;
+        color: #46ABF9;
+    }
+    .download .iphone {
+        margin-right: 2.77778vw;
+        background-color: #fff;
+    }
+    .download .android {
+        background-color: #fff;
+    }
+    .download .iphone:before {
+        width: 2.08333vw;
+        height: 2.56944vw;
+        content: "";
+        background: url(../images/pc_iphone_btn-bee19d0de3.png) no-repeat;
+        background-size: 2.08333vw 2.56944vw;
+        margin-right: 0.55556vw;
+        margin-bottom: 0.34722vw;
+    }
+    .download .android:before {
+        width: 2.22222vw;
+        height: 2.70833vw;
+        content: "";
+        background: url(../images/pc_android_btn-39046821b4.png) no-repeat;
+        background-size: 2.22222vw 2.70833vw;
+        margin-right: 0.55556vw;
+    }
+    .content .right {
+        position: absolute;
+        right: 11.11111vw;
+        bottom: 0;
+        width: 36.11111vw;
+        height: 37.36111vw;
+        background: url(../images/pc_preview-4898b15b6a.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .footer {
+        height: 6.94444vw;
+        font-size: 1.25vw;
+        padding: 1.38889vw 0 2.08333vw;
+    }
+}
